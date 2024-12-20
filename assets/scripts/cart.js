@@ -2,28 +2,28 @@ const products = [
     {
         name: 'Portatil HP',
         price: 899000,
-        category: 'portatil',
+        category: 'laptop',
         image: 'item1.webp'
     },
 
     {
         name: 'Portatil DELL 352',
         price: 2102000,
-        category: 'portatil',
+        category: 'laptop',
         image: 'item2.webp'
     },
 
     {
         name: 'Portatil DELL 352',
         price: 2102000,
-        category: 'portatil',
+        category: 'laptop',
         image: 'item2.webp'
     },
 
     {
         name: 'Portatil HP 240',
         price: 800000,
-        category: 'portatil',
+        category: 'laptop',
         image: 'item3.webp'
     },
 
@@ -118,7 +118,23 @@ function addProduct(name, category, price, image) {
     productsArea.innerHTML += template;
 }
 
-window.addEventListener('load', function() {
-    showProducts();
 
+function filterBy(category) {
+    productsArea.innerHTML = "";
+    const filteredProducts = products.filter(product => product.category === category);
+    filteredProducts.forEach(e => {
+        addProduct(e.name, e.category, e.price, e.image)
+    });
+}
+
+
+function searchBy(text) {
+    
+}
+
+window.addEventListener('load', function() {
+    //showProducts();
+    filterBy("portatil")
 });
+
+f

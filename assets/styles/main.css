@@ -98,7 +98,7 @@ body {
 .product-list__filters {
     position: relative;
     width: 100%;
-    background-color: #BCB0B0;
+    background-color: #ded4d4;
     padding: 1rem;
 }
 
@@ -109,14 +109,20 @@ body {
 
 .product-list__filters-list {
     list-style: none;
-    .product-list__filters-item {
-        border: 1px solid red;
-        margin: 0.2rem 0;
+    display: flex;
+    gap: 0.3rem;
 
-        
-    }
+    
+
+    
 }
 
+.product-list__filters-item {
+    display: flex;
+    margin: 0.2rem 0;
+
+    
+}
 
 .product-list__filters-button {
     background-color: transparent;
@@ -124,6 +130,14 @@ body {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    border: 1px solid #A0A0A0;
+    border-radius: 5px;
+    transition: .1s ease-in-out;
+
+    &:hover {
+        background-color: #c2baba;
+    }
+    
 }
 
 .product-list__area {
