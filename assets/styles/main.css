@@ -85,9 +85,7 @@ body {
 
 /* Content Area - Pages*/
 
-.dy-page {
-    height: calc(100vh - 80px);
-}
+
 
 .product-list {
     display: flex;
@@ -141,7 +139,7 @@ body {
 }
 
 .product-list__area {
-    width: calc(100% - 200px);
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 3rem;
@@ -203,4 +201,11 @@ body {
         font-size: 1.3rem;
         font-weight: bold;
     }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }

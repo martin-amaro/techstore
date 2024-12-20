@@ -93,6 +93,7 @@ const products = [
 
 
 const productsArea = document.querySelector('.product-list__area')
+const searchInput = document.querySelector('#searchInput')
 
 function showProducts() {
     products.forEach(e => {
@@ -128,13 +129,26 @@ function filterBy(category) {
 }
 
 
-function searchBy(text) {
-    
+function search(query) {
+    productsArea.innerHTML = "";
+
+    const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    filteredProducts.forEach(product => {
+        addProduct(product.name, product.category, product.price, product.image);
+    });
 }
 
 window.addEventListener('load', function() {
-    //showProducts();
-    filterBy("portatil")
+    showProducts();
+
+    
 });
 
-f
+searchInput.addEventListener('input', function() {
+    const query = searchInput.value;
+
+    search(query);
+});
